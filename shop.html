@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">        
+        <link rel="stylesheet" href="shop-style-1.css" media="screen and (min-width: 1400px)">
+        <link rel="stylesheet" href="shop-style-2.css" media="screen and (min-width: 1000px) and (max-width: 1400px)">
+        <link rel="stylesheet" href="shop-style-3.css" media="screen and (min-width: 700px) and (max-width: 1000px)">
+        <link rel="stylesheet" href="shop-style-4.css" media="screen and (min-width: 300px) and (max-width: 700px)">
+
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+        <script src="buttons.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <div class="menu-buttons">
+                <div>
+                    <div class="vh"></div>
+                    <a href="index.html">Головна</a>
+                    <div class="vh"></div>
+                    <a href="shop.html">Харчування</a>
+                    <div class="vh"></div>
+                    <a href="clubs.html">Клуби</a>
+                    <div class="vh"></div>
+                    <a href="prices.html">Тарифи</a>
+                    <div class="vh"></div>
+                </div>
+                <div>
+                    <div class="vh"></div>
+                    <a href="index.html">Профіль</a>
+                    <div class="vh"></div>
+                    <a class="cart-ico" href="cart.html"><iconify-icon icon="material-symbols:shopping-cart"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="top_section">
+            <h2>Корисне харчування для ефективних тренувань</h2>
+            <h3>Хочете покращити та пришвидшити ваші результати - ми вам допоможемо!В нашому асортименті наявні усі найпопулярніші добавки, не потрібно нікуди додатково ходити, отримуйте ваше замовлення прямо в залі, коли прийдете на тренування</h3>
+            <!-- <div class="categories">
+                <button>1</button>
+                <button>1</button>
+                <button>1</button>
+            </div> -->
+        </div>
+        <div class="categories">
+            <button class="category-button" onclick="changeState(this)">Протеїни</button>
+            <button class="category-button" onclick="changeState(this)">Амінокислоти</button>
+            <button class="category-button" onclick="changeState(this)">Гейнери</button>
+            <button class="category-button" onclick="changeState(this)">Креатин</button>
+            <button class="category-button" onclick="changeState(this)">Вітаміни</button>
+            <button class="category-button" onclick="changeState(this)">Жироспалювачі</button>
+            <button class="category-button" onclick="changeState(this)">Енергетики</button>
+
+            <script>
+                function changeState(_this) {
+                    if (_this.style.background == 'rgb(94, 58, 212)'){
+                        _this.style.background = "rgb(217, 217, 217)"
+                        _this.style.border = "4px solid rgb(217, 217, 217)";
+                        _this.style.color = "rgb(0, 0, 0)"
+                    }
+                    else{
+                        _this.style.background = "rgb(94, 58, 212)";
+                        _this.style.border = "4px solid rgb(94, 58, 212)";
+                        _this.style.color = "rgb(255, 255, 255)"
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="main-area">
+            <div class="side-menu">
+                <h3>Тип</h3>
+                <div class="type">
+                    <label>Сироватковий<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Сироватковий ізолят<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Казеїн<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Соєвий<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Яєчний<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Комплексний<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Сироватковий<input type="checkbox" name="type" value="Сироватковий"></label>
+                    <label>Сироватковий<input type="checkbox" name="type" value="Сироватковий"></label>
+                </div>
+                <h3>Виробник</h3>
+                <div class="manufact">
+                    <label>Allnutrition<input type="checkbox", name="manufact", value="Allnutrition"></label>
+                    <label>BioTech USA<input type="checkbox", name="manufact", value="BioTech"></label>
+                    <label>BSN<input type="checkbox", name="manufact", value="BSN"></label>
+                    <label>Mutant<input type="checkbox", name="manufact", value="Mutant"></label>
+                    <label>MYPROTEIN<input type="checkbox", name="manufact", value="MYPROTEIN"></label>
+                    <label>Optimum Nutrition<input type="checkbox", name="manufact", value="ON"></label>
+                    <label>Ostrovit<input type="checkbox", name="manufact", value="Ostrovit"></label>
+                    <label>PowerPro<input type="checkbox", name="manufact", value="PowerPro"></label>
+                    <label>Scitec Nutrition<input type="checkbox", name="manufact", value="Scitec"></label>
+                </div>
+                <h3>Смак</h3>
+                <div class="taste">
+                    <label>Без смаку<input type="checkbox", name="taste", value="unflavored"></label>
+                    <label>Банан<input type="checkbox", name="taste", value="banana"></label>
+                    <label>Полуниця<input type="checkbox", name="taste", value="strawberry"></label>
+                    <label>Шоколад<input type="checkbox", name="taste", value="choco"></label>
+                    <label>Фісташки<input type="checkbox", name="taste", value="pistachio"></label>
+                    <label>Ваніль<input type="checkbox", name="taste", value="vanilla"></label>
+                    <label>Шоколад-Горіх<input type="checkbox", name="taste", value="choco-nut"></label>
+                    <label>Жувальна гумка<input type="checkbox", name="taste", value="chewing-gum"></label>
+                    <label>Карамель<input type="checkbox", name="taste", value="caramel"></label>
+                    <label>Капучино<input type="checkbox", name="taste", value="cappuchino"></label>
+                    <label>Кокос<input type="checkbox", name="taste", value="coconut"></label>
+                    <label>Тістечко<input type="checkbox", name="taste", value="cake"></label>
+                    <label>Тропічні фрукти<input type="checkbox", name="taste", value="tropical-fruits"></label>
+                    <label>Манго<input type="checkbox", name="taste", value="mango"></label>
+                    <label>Малина<input type="checkbox", name="taste", value="raspberry"></label>
+                    <label>М'ята<input type="checkbox", name="taste", value="mint"></label>
+                    <label>Персик<input type="checkbox", name="taste", value="peach"></label>
+                    <label>Піна Колада<input type="checkbox", name="taste", value="pina-colada"></label>
+                    <label>Яблуко<input type="checkbox", name="taste", value="apple"></label>
+                </div>
+            </div>
+
+            <div class="goods">
+                <div id="1">
+                    <img src="images\256318471.jpg">
+                    <div class="card-info">
+                        <h3>Optimum Nutrition 100% Whey Gold Standard</h3>
+                        <p>2270 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Ванільне морозиво</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="2">
+                    <img src="images\207498326.jpg">
+                    <div class="card-info">
+                        <h3>BioTech USA 100% Pure Whey</h3>
+                        <p>2270 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Банан</option>
+                            <option value="banana">Ванільне морозиво</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="3">
+                    <img src="images\44386263.jpg">
+                    <div class="card-info">
+                        <h3>Scitec Nutrition 100% Whey Protein Professional</h3>
+                        <p>920 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Вишневий йогурт</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="4">
+                    <img src="images\162298911.jpg">
+                    <div class="card-info">
+                        <h3>Rule 1 Whey Blend</h3>
+                        <p>920 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Шоколад</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="5">
+                    <img src="images\277900270.jpg">
+                    <div class="card-info">
+                        <h3>MYPROTEIN Micellar Casein</h3>
+                        <p>1000 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Ваніль</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="6">
+                    <img src="images\304771108.jpg">
+                    <div class="card-info">
+                        <h3>MYPROTEIN Impact Whey Protein</h3>
+                        <p>1000 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Шоколад-Горіх</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="7">
+                    <img src="images\304771122.jpg">
+                    <div class="card-info">
+                        <h3>OstroVit STANDARD WPC80.eu</h3>
+                        <p>2270 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Бісквітні мрії</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="8">
+                    <img src="images\10698416.jpg">
+                    <div class="card-info">
+                        <h3>Power Pro Whey Protein</h3>
+                        <p>1000 г</p>
+                        <select class="taste-selector">
+                            <option value="vanilla">Вишня в шоколаді</option>
+                            <option value="banana">Банан</option>
+                            <option value="strawberry">Полуничний мілкшейк</option>
+                            <option value="choco">Шоколад</option>
+                            <option value="coconut">Кокос</option>
+                        </select>
+                        <div class="pricecart">
+                            <h4>000грн</h4>
+                            <button>В кошик</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-number">
+                    <button id="p1">1</button>
+                    <button id="p2">2</button>
+                    <button id="p3">3</button>
+                    <button id="p4">4</button>
+                    <button id="p5">5</button>
+                    <button id="p6">6</button>
+                    <button id="p7">7</button>
+                    <button id="p8">8</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo">
+                <h3><span class="half1">Gym</span><span class="half2">Nation</span></h3>
+                <h4>Вперед до вашої мети <br>разом з GymNation!</h4>
+            </div>
+
+            <div class="tabs">
+                <h5>Головна</h5>
+                <h5>Тарифи</h5>
+                <h5>Харчування</h5>
+                <h5>Профіль</h5>
+                <h5>Клуби</h5>
+                <h5>Кошик</h5>
+            </div>
+
+            <div class="contacts">
+                <h4>Зв'язок з нами</h4>
+                <h5>
+                    <iconify-icon icon="material-symbols:phone-in-talk" style="color: white;" height="3vh"></iconify-icon>
+                    (095)-938-90-99
+                </h5>
+                <h5>
+                    <iconify-icon icon="material-symbols:mail-outline" style="color: white;" height="3vh"></iconify-icon>
+                    aleksseva003@gmail.com
+                </h5>
+            </div>
+
+            <div class="socials">
+                <h4>Соцмережі</h4>
+                <div class="logos">
+                    <button class="facebook">
+                        <iconify-icon icon="ri:facebook-fill" style="color: white;"></iconify-icon>                  
+                    </button>
+                    <button class="telegram">
+                        <iconify-icon icon="mingcute:telegram-fill" style="color: white;"></iconify-icon>       
+                    </button>
+                    <button class="twitter">
+                        <iconify-icon icon="ri:twitter-fill" style="color: #5e3ad4;"></iconify-icon>                 
+                    </button>
+                    <button class="insta">
+                        <iconify-icon icon="ri:instagram-fill" style="color: #5e3ad4;"></iconify-icon>                  
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
