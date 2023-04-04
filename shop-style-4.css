@@ -209,17 +209,17 @@ body{
 .main-area{
     display: flex;
     flex-direction: column;
-    height: 335vh;
+    /* height: 335vh; */
 }
 
 .main-area .side-menu{
     width: 100%;
     background-color: #FFFFFF;
-    height: 100vh;
+    height: 120vh;
 
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   
 }
 
@@ -238,7 +238,7 @@ body{
     margin: 2% 2% 10% 2%;
     padding: 2%;
 
-    height: 20%;
+    height: 25%;
 
     overflow-x: hidden;
     overflow-y: auto;
@@ -285,8 +285,8 @@ body{
 
 .main-area > .goods{
     width: 100%;
-    min-height: 200vh;
-    height: 200vh;
+    /* min-height: 200vh; */
+    height: 250vh;
 
     display: flex;
     flex-direction: column;
@@ -297,7 +297,7 @@ body{
     padding: 2% 1% 2% 1%;
 }
 
-.main-area > .goods > div{
+.main-area > .goods > div:not(.page-number){
     background-color: #FFFFFF;
     border-radius: 8px;
     height: 15%;
@@ -307,6 +307,7 @@ body{
 
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .main-area > .goods > div > img{
@@ -403,16 +404,16 @@ body{
 
 .card-info > .pricecart > button{
     background: #6AB856;
-    border-radius: 25px;
-    width: 40%;
+    border-radius: 20px;
+    width: 44%;
     height: 90%;
     border: none;
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;    
+    font-size: 22px;
+    line-height: 27px;    
 }
 
 
